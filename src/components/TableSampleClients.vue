@@ -15,7 +15,7 @@ defineProps({
 
 const mainStore = useMainStore();
 
-const items = computed(() => mainStore.clients);
+const items = computed(() => mainStore.gateways);
 
 const isModalActive = ref(false);
 
@@ -60,13 +60,13 @@ const remove = (arr, cb) => {
   return newArr;
 };
 
-const checked = (isChecked, client) => {
+const checked = (isChecked, gateway) => {
   if (isChecked) {
-    checkedRows.value.push(client);
+    checkedRows.value.push(gateway);
   } else {
     checkedRows.value = remove(
       checkedRows.value,
-      (row) => row.id === client.id
+      (row) => row.id === gateway.id
     );
   }
 };
@@ -74,8 +74,8 @@ const checked = (isChecked, client) => {
 
 <template>
   <CardBoxModal v-model="isModalActive" title="Sample modal">
-    <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
-    <p>This is sample modal</p>
+    <p>sample data, emulator <b>sample</b></p>
+    <p>This is sample model</p>
   </CardBoxModal>
 
   <CardBoxModal
@@ -84,8 +84,8 @@ const checked = (isChecked, client) => {
     button="danger"
     has-cancel
   >
-    <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
-    <p>This is sample modal</p>
+    <p>sample data, emulator <b>sample</b></p>
+    <p>This is sample model</p>
   </CardBoxModal>
 
   <div v-if="checkedRows.length" class="p-3 bg-gray-100/50 dark:bg-slate-800">
@@ -103,49 +103,43 @@ const checked = (isChecked, client) => {
       <tr>
         <th v-if="checkable" />
         <th />
-        <th>Name</th>
-        <th>Company</th>
-        <th>City</th>
-        <th>Progress</th>
+        <th>Dev</th>
+        <th>service</th>
+        <th>Region</th>
+        <th>status</th>
         <th>Created</th>
         <th />
       </tr>
     </thead>
     <tbody>
-      <tr v-for="client in itemsPaginated" :key="client.id">
+      <tr v-for="gateway in itemsPaginated" :key="gateway.id">
         <TableCheckboxCell
           v-if="checkable"
-          @checked="checked($event, client)"
+          @checked="checked($event, gateway)"
         />
         <td class="border-b-0 lg:w-6 before:hidden">
           <UserAvatar
-            :username="client.name"
+            :username="gateway.eui"
             class="w-24 h-24 mx-auto lg:w-6 lg:h-6"
           />
         </td>
-        <td data-label="Name">
-          {{ client.name }}
+        <td data-label="Dev">
+          {{ gateway.eui }}
         </td>
-        <td data-label="Company">
-          {{ client.company }}
+        <td data-label="Service">
+          {{ gateway.service }}
         </td>
-        <td data-label="City">
-          {{ client.city }}
+        <td data-label="Region">
+          {{ gateway.region }}
         </td>
-        <td data-label="Progress" class="lg:w-32">
-          <progress
-            class="flex w-2/5 self-center lg:w-full"
-            max="100"
-            :value="client.progress"
-          >
-            {{ client.progress }}
-          </progress>
+        <td data-label="status">
+          {{ gateway.status }}
         </td>
         <td data-label="Created" class="lg:w-1 whitespace-nowrap">
           <small
             class="text-gray-500 dark:text-slate-400"
-            :title="client.created"
-            >{{ client.created }}</small
+            :title="gateway.created"
+            >{{ gateway.created }}</small
           >
         </td>
         <td class="before:hidden lg:w-1 whitespace-nowrap">

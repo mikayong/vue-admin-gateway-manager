@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-
 import App from "./App.vue";
 import router from "./router";
 import { useMainStore } from "@/stores/main.js";
@@ -20,7 +19,7 @@ const mainStore = useMainStore(pinia);
 const styleStore = useStyleStore(pinia);
 
 /* Fetch sample data */
-mainStore.fetch("clients");
+mainStore.fetch("gateways");
 mainStore.fetch("history");
 
 /* App style */
@@ -36,7 +35,7 @@ if (
 }
 
 /* Default title tag */
-const defaultDocumentTitle = "Admin One Vue 3 Tailwind";
+const defaultDocumentTitle = "Gateway Manager system";
 
 /* Set document title from route meta */
 router.afterEach((to) => {

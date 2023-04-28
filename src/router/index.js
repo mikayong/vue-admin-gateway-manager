@@ -23,19 +23,11 @@ const routes = [
   },
   {
     meta: {
-      title: "Tables",
+      title: "Gateway",
     },
     path: "/tables",
-    name: "tables",
+    name: "gateway",
     component: () => import("@/views/TablesView.vue"),
-  },
-  {
-    meta: {
-      title: "Forms",
-    },
-    path: "/forms",
-    name: "forms",
-    component: () => import("@/views/FormsView.vue"),
   },
   {
     meta: {
@@ -44,22 +36,6 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: () => import("@/views/ProfileView.vue"),
-  },
-  {
-    meta: {
-      title: "Ui",
-    },
-    path: "/ui",
-    name: "ui",
-    component: () => import("@/views/UiView.vue"),
-  },
-  {
-    meta: {
-      title: "Responsive layout",
-    },
-    path: "/responsive",
-    name: "responsive",
-    component: () => import("@/views/ResponsiveView.vue"),
   },
   {
     meta: {

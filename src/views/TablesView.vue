@@ -3,7 +3,7 @@ import {
   mdiMonitorCellphone,
   mdiTableBorder,
   mdiTableOff,
-  mdiGithub,
+  mdiWikipedia,
 } from "@mdi/js";
 import SectionMain from "@/components/SectionMain.vue";
 import NotificationBar from "@/components/NotificationBar.vue";
@@ -18,19 +18,19 @@ import CardBoxComponentEmpty from "@/components/CardBoxComponentEmpty.vue";
 <template>
   <LayoutAuthenticated>
     <SectionMain>
-      <SectionTitleLineWithButton :icon="mdiTableBorder" title="Tables" main>
+      <SectionTitleLineWithButton :icon="mdiTableBorder" title="Gateways" main>
         <BaseButton
-          href="https://github.com/justboil/admin-one-vue-tailwind"
+          href="http://wiki.dragino.com"
           target="_blank"
-          :icon="mdiGithub"
-          label="Star on GitHub"
+          :icon="mdiWikipedia"
+          label="Star on Wiki"
           color="contrast"
           rounded-full
           small
         />
       </SectionTitleLineWithButton>
       <NotificationBar color="info" :icon="mdiMonitorCellphone">
-        <b>Responsive table.</b> Collapses on mobile
+        <b>Gateways list.</b>
       </NotificationBar>
 
       <CardBox class="mb-6" has-table>
@@ -40,7 +40,7 @@ import CardBoxComponentEmpty from "@/components/CardBoxComponentEmpty.vue";
       <SectionTitleLineWithButton :icon="mdiTableOff" title="Empty variation" />
 
       <NotificationBar color="danger" :icon="mdiTableOff">
-        <b>Empty table.</b> When there's nothing to show
+        <b>No gateway.</b> When there's nothing to show
       </NotificationBar>
 
       <CardBox>

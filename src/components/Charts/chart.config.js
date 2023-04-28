@@ -1,8 +1,7 @@
 export const chartColors = {
   default: {
-    primary: "#00D1B2",
-    info: "#209CEE",
-    danger: "#FF3860",
+    online: "#00D1B2",
+    offline: "#FF3860",
   },
 };
 
@@ -46,9 +45,8 @@ export const sampleChartData = (points = 9) => {
   return {
     labels,
     datasets: [
-      datasetObject("primary", points),
-      datasetObject("info", points),
-      datasetObject("danger", points),
+      datasetObject("online", points),
+      datasetObject("offline", points),
     ],
   };
 };

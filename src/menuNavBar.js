@@ -8,8 +8,7 @@ import {
   mdiEmail,
   mdiLogout,
   mdiThemeLightDark,
-  mdiGithub,
-  mdiReact,
+  mdiWikipedia,
 } from "@mdi/js";
 
 export default [
@@ -67,17 +66,10 @@ export default [
     isToggleLightDark: true,
   },
   {
-    icon: mdiGithub,
-    label: "GitHub",
+    icon: mdiWikipedia,
+    label: "Wiki",
     isDesktopNoLabel: true,
-    href: "https://github.com/justboil/admin-one-vue-tailwind",
-    target: "_blank",
-  },
-  {
-    icon: mdiReact,
-    label: "React version",
-    isDesktopNoLabel: true,
-    href: "https://github.com/justboil/admin-one-react-tailwind",
+    href: "http://wiki.dragino.com",
     target: "_blank",
   },
   {

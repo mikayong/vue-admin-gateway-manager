@@ -6,7 +6,7 @@ import {
   mdiMail,
   mdiAsterisk,
   mdiFormTextboxPassword,
-  mdiGithub,
+  mdiWikipedia,
 } from "@mdi/js";
 import SectionMain from "@/components/SectionMain.vue";
 import CardBox from "@/components/CardBox.vue";
@@ -47,10 +47,10 @@ const submitPass = () => {
     <SectionMain>
       <SectionTitleLineWithButton :icon="mdiAccount" title="Profile" main>
         <BaseButton
-          href="https://github.com/justboil/admin-one-vue-tailwind"
+          href="http://wiki.dragino.com"
           target="_blank"
-          :icon="mdiGithub"
-          label="Star on GitHub"
+          :icon="mdiWikipedia"
+          label="Star on Wiki"
           color="contrast"
           rounded-full
           small

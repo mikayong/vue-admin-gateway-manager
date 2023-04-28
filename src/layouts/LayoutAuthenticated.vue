@@ -14,8 +14,8 @@ import AsideMenu from "@/components/AsideMenu.vue";
 import FooterBar from "@/components/FooterBar.vue";
 
 useMainStore().setUser({
-  name: "John Doe",
-  email: "john@example.com",
+  name: "Dragino",
+  email: "support@dragino.com",
   avatar:
     "https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93",
 });
@@ -99,10 +99,10 @@ const menuClick = (event, item) => {
       <FooterBar>
         Get more with
         <a
-          href="https://tailwind-vue.justboil.me/"
+          href="http://www.dragino.com/wiki"
           target="_blank"
           class="text-blue-600"
-          >Premium version</a
+          >Dragino wiki</a
         >
       </FooterBar>
     </div>

@@ -1,5 +1,5 @@
 <script setup>
-import { mdiGithub } from "@mdi/js";
+import { mdiBridge } from "@mdi/js";
 import BaseButton from "@/components/BaseButton.vue";
 import SectionBanner from "@/components/SectionBanner.vue";
 import { gradientBgPinkRed } from "@/colors";
@@ -8,13 +8,13 @@ import { gradientBgPinkRed } from "@/colors";
 <template>
   <SectionBanner :class="gradientBgPinkRed">
     <h1 class="text-3xl text-white mb-6">
-      Like the project? Please star on <b>GitHub</b> ;-)
+      More products, contact <b>Dragino</b> ;-)
     </h1>
     <div>
       <BaseButton
-        href="https://github.com/justboil/admin-one-vue-tailwind"
-        :icon="mdiGithub"
-        label="GitHub"
+        href="https://www.dragino.com"
+        :icon="mdiBridge"
+        label="dragino"
         target="_blank"
         rounded-full
       />

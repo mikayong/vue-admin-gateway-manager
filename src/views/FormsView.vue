@@ -1,6 +1,6 @@
 <script setup>
 import { reactive, ref } from "vue";
-import { mdiBallotOutline, mdiAccount, mdiMail, mdiGithub } from "@mdi/js";
+import { mdiBallotOutline, mdiAccount, mdiMail, mdiWikipedia } from "@mdi/js";
 import SectionMain from "@/components/SectionMain.vue";
 import CardBox from "@/components/CardBox.vue";
 import FormCheckRadioGroup from "@/components/FormCheckRadioGroup.vue";
@@ -63,10 +63,10 @@ const formStatusSubmit = () => {
         main
       >
         <BaseButton
-          href="https://github.com/justboil/admin-one-vue-tailwind"
+          href="http://wiki.dragino.com"
           target="_blank"
-          :icon="mdiGithub"
-          label="Star on GitHub"
+          :icon="mdiWikipedia"
+          label="Star on Wiki"
           color="contrast"
           rounded-full
           small
