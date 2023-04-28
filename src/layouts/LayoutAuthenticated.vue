@@ -99,7 +99,7 @@ const menuClick = (event, item) => {
       <FooterBar>
         Get more with
         <a
-          href="http://www.dragino.com/wiki"
+          href="http://wiki.dragino.com"
           target="_blank"
           class="text-blue-600"
           >Dragino wiki</a

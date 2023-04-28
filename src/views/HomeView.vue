@@ -51,11 +51,11 @@ onMounted(() => {
 
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
         <CardBoxWidget
-          trend="12%"
+          trend="70%"
           trend-type="up"
           color="text-emerald-500"
           :icon="mdiRouterWireless"
-          :number="12"
+          :number="16"
           label="online"
         />
         <CardBoxWidget
@@ -77,7 +77,7 @@ onMounted(() => {
       </div>
       <SectionBannerStarOnGitHub class="mt-6 mb-6" />
 
-      <SectionTitleLineWithButton :icon="mdiChartPie" title="Trends overview">
+      <SectionTitleLineWithButton :icon="mdiChartPie" title="Trends(online/offline) overview">
         <BaseButton
           :icon="mdiReload"
           color="whiteDark"
